@@ -7,9 +7,11 @@ import {
 	LightningBoltIcon,
 	SearchIcon,
 	UserIcon
-} from "@heroicons/react/outline"
+} from "@heroicons/react/outline";
+import { useRouter } from 'next/router';
 
 export default function Header() {
+	const router = useRouter();
 	return (
 		<header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
 			<div className="flex flex-grow justify-evenly max-w-2xl">
@@ -25,6 +27,7 @@ export default function Header() {
 				src="https://links.papareact.com/ua6"
 				width={200}
 				height={100}
+				onClick={() => router.push('/')}
 			/>
 		</header>
 	)
